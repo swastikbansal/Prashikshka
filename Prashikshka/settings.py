@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "template"],
+        'DIRS': [BASE_DIR / r"react_prashikshka\build"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,5 +125,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Added by me 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / r"react_prashikshka\build\static",
 ]

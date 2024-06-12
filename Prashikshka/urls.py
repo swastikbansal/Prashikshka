@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+
 ]
+
+# Django admin site header
+admin.site.site_header = "Prashikshka Admin"
+admin.site.site_title = "Prashikshka Admin Portal"
+admin.site.index_title = "Welcome to Prashikshka Researcher Portal"
