@@ -2,12 +2,13 @@
 {% block title %}
 File Share
 {% endblock title %}
+
 {% block body %}
 <div class="container py-4">
     
     <h1>File Share</h1> <br>
     
-    <p>View your file here</p>
+    <p>View your files here</p>
     
     <table class="table">
         <thead>
@@ -19,7 +20,7 @@ File Share
         <tbody>
             {% for file in files %}
             <tr>
-                <td>{{ file.file_name }}</td>
+                <td>{{ file.title }}</td>
                 <td><a href="{{ file.file.url }}" class='btn btn-primary'>Download</a></td>
             </tr>
             {% endfor %}
