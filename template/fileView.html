@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+File Share
+{% endblock title %}
+{% block body %}
+<div class="container py-4">
+    
+    <h1>File Share</h1> <br>
+    
+    <p>View your file here</p>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+            <tr>
+                <td>{{ file.file_name }}</td>
+                <td><a href="{{ file.file.url }}" class='btn btn-primary'>Download</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock body %}

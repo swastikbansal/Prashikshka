@@ -16,14 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 
 # URL patterns for the project
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Dashboard.urls')),
-    path('', include('fileShare.urls')),
+    path('file/', include('fileShare.urls')),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Django admin site header
 admin.site.site_header = "Prashikshka Admin"

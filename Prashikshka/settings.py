@@ -119,3 +119,8 @@ STATICFILES_DIRS = [
     # BASE_DIR / r"react_prashikshka\build\static", # FOr React
     BASE_DIR / "static",
 ]
+
+# Media files
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'

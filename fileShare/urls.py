@@ -2,5 +2,6 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path('file/',views.fileShare,name='fileShare'),
+    path('/upload',views.fileUpload,name='fileUpload'),
+    path('',views.fileView,name='fileView'),
 ]
